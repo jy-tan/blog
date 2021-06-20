@@ -1,27 +1,53 @@
-baseURL = "https://example.com"
-title = "My new Hugo site"
+baseURL = "https://jytan.net"
+title = "jytan"
 languageCode = "en-us"
 theme = "papaya"
 
 [menu]
 
   [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     pre = "info"
     url = "/about/"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "post"
     name = "Posts"
     pre = "pen-tool"
     url = "/posts/"
-    weight = 2
+    weight = 3
 
+  [[menu.main]]
+    identifier = "notes"
+    name = "Notes"
+    pre = "book"
+    url = "/notes/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Tags"
+    pre = "tag"
+    url = "/tags/"
+    weight = 5
 
 [taxonomies]
   tag = "tags"
 
 [params]
   authorName = "Jun Yu"
+  
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 5
+  ordered = false

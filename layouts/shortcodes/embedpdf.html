@@ -1,0 +1,8 @@
+<object data="{{ .Get "src" }}" type="application/pdf" 
+    {{ if .Get "style" }}
+    style="{{ .Get "style" }}"
+    {{ else }}
+    style="height:90vh; max-height:800px; width:100%;"
+    {{ end }}>
+    <a href="{{ .Get "src" }}">Here</a>
+</object>
