@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div id="home-jumbotron" class=" text-center mb-1">
+  <h1 class="title">{{ .Site.Title }}</h1>
+  <!--
+  <p class="font-125">by <a class="black-link" href="/about/">{{ .Site.Params.authorName | markdownify }}</a></p>
+  -->
+</div>
+
+<div id="last-post" class="mb-2">
+  <p class="font-125">Newest post:</p>
+  <div style="border: 1px solid black; padding:20px">
+    {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <p>
+      <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ partial "metadata.html" . }}
+      <a class="summary" href="{{ .RelPermalink }}">
+        <p>{{ .Summary }}</p>
+      </a>
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}
