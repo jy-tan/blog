@@ -8,7 +8,7 @@ math = "true"
 
 ![image](/images/copula/link.jpg)
 
-In statistics, copulas are functions that allow us to define a multivariate distribution by specificying their univariate marginals and interdependencies separately. In modelling returns of assets, for example, this enables greater flexibility and ability to model joint behaviour in extreme events.
+In statistics, copulas are functions that allow us to define a multivariate distribution by specifying their univariate marginals and interdependencies separately. In modelling returns of assets, for example, this enables greater flexibility and ability to model joint behaviour in extreme events.
 
 <!--more-->
 
