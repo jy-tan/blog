@@ -362,3 +362,5 @@ Although empirically at \\(q=0.02\\) and \\(q=0.01\\) the estimated tail depende
 Compared to simulated data from the bivariate normal distribution earlier, the simulation from the t copula is closer to the empirical data and produce substantial estimates at the tail, albeit still lower. In extreme cases like \\(q=0.005\\) or \\(q=0.001\\), we still manage to obtain estimates of tail dependence where it is too small for the bivariate normal to reliably estimate.
 
 In the event of insufficiency of data, copulas are also able to provide a theoretical measure of tail dependence. It is however noteworthy that not all copulas model tail dependences. t copula provides the above formula for both lower and upper tail dependences, while Gumbel copula, for example, only models upper tail dependence.
+
+*Cover image: [Unsplash](https://unsplash.com/photos/OzyY3C8zVU8) (cropped)*

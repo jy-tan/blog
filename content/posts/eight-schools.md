@@ -13,7 +13,7 @@ A walkthrough of a classical Bayesian problem.
 
 <!--more-->
 
-The problem we're discussing in this post appears in [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/). Here, Gelman et al. describe the results of independent experiments to determine the effects of special coaching programs on SAT scores.
+The problem we're discussing in this post appears in [Bayesian Data Analysis, 3rd edition](http://www.stat.columbia.edu/~gelman/book/) (BDA3). Here, Gelman et al. describe the results of independent experiments to determine the effects of special coaching programs on SAT scores.
 
 There are $J = 8$ schools in this experiment. For the $j$th experiment $j = 1,\dots,J$, one observes an estimated coaching effect $y_j$ with associated standard error $\sigma_j$, the values of the effects and standard errors are displayed in the table below. We only observe $\mathbf{y}=\{y_1,\dots,y_n\}$ and $\boldsymbol{\sigma}=\{\sigma_1,\dots,\sigma_j\}$, instead of the original full dataset.
 
@@ -351,7 +351,7 @@ We arrive at estimates of the true coaching effect $\theta_j$'s from our hierarc
 From the conditional posteriors above, we can find that the posterior mean of $\theta_j$, conditioned on $(\mu,\tau)$, can be written as
 
 $$
-\mathrm{E}(\theta_j\vert\mu,\tau,\mathbf{y},\mathbf{\sigma}) = (1-B_j)y_j + B_j\mu
+\mathrm{E}(\theta_j\vert\mu,\tau,\mathbf{y},\boldsymbol{\sigma}) = (1-B_j)y_j + B_j\mu
 $$
 
 where
@@ -394,18 +394,18 @@ print(data.frame(school = LETTERS[c(1:8)],
 
 We observe that shrinkage and sigma values for each school have the same rank. This is consistent with the shrinkage formula above; since the squared inverse of $\sigma_j$ is in the denominator, $B_j$ has a positive relationship with $\sigma_j$.  This also means that the conditional posterior mean for schools with higher standard errors will be shrunk more towards the global mean.
 
-The samples also provide a way draw other related inferences, such as the probability of seeing an effect as large as 28.4 for school A, which works out to be a very low value.
+The samples also provide a way draw other related inferences, such as the probability of seeing an effect as large as 28 for school A, which works out to be a very low value.
 
 ```r
-sum(theta_all[,1] > 28.4) / length(theta_all[,1])
+sum(theta_all[,1] > 28) / length(theta_all[,1])
 ```
 ```
-0.0444
+0.0468
 ```
 
-Note the contrast with the "separate estimates" approach we discussed earlier, which would imply that this probability is 50\%, which seems overly large especially given the estimates from other schools.
+Note the contrast with the "separate estimates" approach we discussed earlier, which would imply that this probability is 50\%, which seems overly large especially given the data from other schools.
 
-We can also ask what's the probability that school A has a greater coaching effect than the rest of the schools.
+We can also ask for the probability that school A has a greater coaching effect than the rest of the schools.
 
 ```r
 prob <-c()
@@ -433,13 +433,11 @@ The probability that school A's coaching effect is greater than the other school
 
 ## Conclusion
 
-In summary, Bayesian hierarchical modeling gives us a way to calculate "true effect" sizes that is otherwise hard to obtain (we only have unbiased estimates and standard errors from our dataset). Arguably, the assumptions of both the "separate estimates" and "pooled estimates" approach don't fully capture the state of our knowledge to be able to use them convincingly. But with the hierarchical model, we now have a "middle ground" of sorts, and it is also flexible enough to incorporate both empirical data and any prior beliefs we might have, which is summarized by the posterior distribution. Finally, we can obtain samples using MCMC methods, from which we can gather inferences.
+In summary, Bayesian hierarchical modeling gives us a way to calculate "true effect" sizes that is otherwise hard to obtain (we only have unbiased estimates and standard errors from our dataset). Arguably, the assumptions of both the "separate estimates" and "pooled estimates" approach don't fully capture the state of our knowledge to be able to use them convincingly. But with the hierarchical model, we now have a "middle ground" of sorts, and it is also flexible enough to incorporate both empirical data and any prior beliefs we might have, both summarized by the posterior distribution. Finally, we can obtain samples using MCMC methods, from which we can perform inferences.
 
 
 ## Credits
 
-I learnt of this interesting problem as a piece of assignment from my Bayesian Statistics class, ST4234 in NUS, taught by Prof Li Cheng. I also referred to [Bayesian Data Analsis, 3rd edition](http://www.stat.columbia.edu/~gelman/book/BDA3.pdf) by Gelman et al for further context and some relevant statistical arguments.
+I learnt of this interesting problem as a piece of assignment from my Bayesian Statistics class, ST4234 in NUS, taught by Prof Li Cheng. I also referred to [Bayesian Data Analysis, 3rd edition](http://www.stat.columbia.edu/~gelman/book/BDA3.pdf) by Gelman et al for further context and some relevant statistical arguments.
 
-*Cover image: Helmholtz Institute Freiberg for Resource Technology. Source: [Unsplash](https://unsplash.com/photos/LWfFfA5U5z8)*  
-
-
+*Cover image: Helmholtz Institute Freiberg for Resource Technology. Source: [Unsplash](https://unsplash.com/photos/LWfFfA5U5z8) (cropped)*
