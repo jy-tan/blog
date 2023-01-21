@@ -54,6 +54,8 @@ h1.title {
 
 img {
     max-width: 100%;
+    margin: auto;
+    display: block;
 }
 
 a.title:link, a.title:visited, a.title:hover, a.title:active {

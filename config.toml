@@ -1,5 +1,5 @@
 baseURL = "https://jytan.net"
-title = "jytan"
+title = "JY Tan"
 languageCode = "en-us"
 theme = "papaya"
 
@@ -42,7 +42,7 @@ theme = "papaya"
   tag = "tags"
 
 [params]
-  authorName = "Jun Yu"
+  authorName = "Jun Yu Tan"
   
 [markup.goldmark.renderer]
 unsafe = true
