@@ -2,6 +2,7 @@ baseURL = "https://jytan.net"
 title = "JY Tan"
 languageCode = "en-us"
 theme = "papaya"
+googleAnalytics = "G-3FTFKQRM12"
 
 [menu]
 
