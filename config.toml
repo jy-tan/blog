@@ -2,7 +2,6 @@ baseURL = "https://jytan.net"
 title = "JY Tan"
 languageCode = "en-us"
 theme = "papaya"
-googleAnalytics = "G-3FTFKQRM12"
 
 [menu]
 
@@ -44,6 +43,7 @@ googleAnalytics = "G-3FTFKQRM12"
 
 [params]
   authorName = "Jun Yu Tan"
+  googleAnalytics = "G-3FTFKQRM12"
   
 [markup.goldmark.renderer]
 unsafe = true

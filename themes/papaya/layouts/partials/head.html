@@ -6,7 +6,8 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ if .Site.Params.googleAnalytics }}
+    
+    {{ if and (hugo.IsProduction) (.Site.Params.googleAnalytics) }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,7 @@
         gtag('config', '{{ .Site.Params.googleAnalytics }}');
     </script>
     {{ end }}
+    
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     {{ $title := print .Site.Title " | " .Title }}
