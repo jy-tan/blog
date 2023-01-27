@@ -1,6 +1,6 @@
 +++
 title = "Learning Bayesian Hierarchical Modeling from 8 Schools"
-date = "2022-12-27T21:00:00+00:00"
+date = "2023-01-22T21:00:00+00:00"
 tags = ["bayesian", "statistics"]
 author = "Jun Yu"
 math = "true"

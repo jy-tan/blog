@@ -29,7 +29,8 @@
 }
 
 h1.title {
-    font-family: 'Ma Shan Zheng', cursive;
+    font-family: 'Permanent Marker';
+    /* font-family: 'Bungee Shade'; */
     font-size: 400%;
 }
 
@@ -86,4 +87,8 @@ code {
 pre > code {
     padding: 2%;
     margin-left: 1%;
+}
+
+p {
+    text-align: justify;
 }
