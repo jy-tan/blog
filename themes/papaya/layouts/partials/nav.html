@@ -1,5 +1,5 @@
 <div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
+    <nav id="nav" class="nav justify-content-center align-items-center position-relative">
         {{ range .Site.Menus.main }}
         <a class="nav-link" href="{{ .URL }}">
         {{ if .Pre }}
@@ -10,5 +10,6 @@
         {{ $text }}
         </a>
         {{ end }}
+        {{ partial "toggle.html" . }}
     </nav>
 </div>

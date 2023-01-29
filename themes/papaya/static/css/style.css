@@ -28,9 +28,15 @@
     background-color: inherit;
 }
 
+#newest-post-div {
+    border: 1px solid black;
+    padding: 20px;
+}
+
 h1.title {
     font-family: 'Permanent Marker';
-    /* font-family: 'Bungee Shade'; */
+    /* font-family: 'Bungee Inline'; */
+    /* font-family: 'Rowdies'; */
     font-size: 400%;
 }
 

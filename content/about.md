@@ -14,6 +14,14 @@ Previously, I was a data science intern at [eyos](https://eyos.one/) (a retail a
 
 Here, I discuss ideas and experiences I've learned or explored, and my interests generally lie in machine learning, statistics and ML engineering.
 
-Feel free to connect with me on [LinkedIn](https://linkedin.com/in/tanjy) or reach out to me via [email](mailto:jy8230@gmail.com).
+Feel free to connect with me on 
+<a href="https://www.linkedin.com/in/tanjy/"
+        class="btn btn-sm btn-outline-dark" data-show-count="false" aria-label="LinkedIn">
+        <i class="feather-16" data-feather="linkedin"></i></a> 
+or reach out to me via 
+<a href="mailto:jy8230@gmail.com"
+        class="btn btn-sm btn-outline-dark" data-show-count="false" aria-label="Email">
+        <i class="feather-16" data-feather="mail"></i></a> .
+    
 
-*Opinions expressed are solely my own and do not represent the views of my previous or current employer(s).*
+<center><small><i>Opinions expressed are solely my own and do not represent the views of my previous or current employer(s).</i></small></center>
