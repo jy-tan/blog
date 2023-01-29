@@ -94,10 +94,10 @@ Accompanying the fourth point is the [Bayesian Truth Serum](https://wesselb.gith
 
 On the dataset level, we can implement statistical quality control as a measure of reliability. [Krippendorff’s alpha](https://en.wikipedia.org/wiki/Krippendorff%27s_alpha) aims to answer the question: “what is the overall level of agreement in my dataset?”. We wish to find out if annotators agree with one another often enough that we can rely on their labels as ground truths. Krippendorff’s alpha is a calculated value between $[-1, 1]$, and generally can be interpreted as such:
 
-- 0.8: high agreement; reliable dataset to use for training models
+- 0.8 - 1: high agreement; reliable dataset to use for training models
 - 0.67 - 0.8: likely that some labels are highly consistent and others are not; low reliability
 - 0: random distribution
-- 1: perfect disagreement
+- -1: perfect disagreement
 
 Krippendorff’s alpha can handle incomplete datasets and generalizes to different sample sizes and number of annotators. However, if the expected agreement is high enough (e.g. 95% of annotator predictions are of one class), then Krippendorff’s alpha will stay relatively low no matter how often they agree, and there is no theoretical way to obtain significance thresholds besides bootstrapping.
 
