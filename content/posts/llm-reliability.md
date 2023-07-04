@@ -6,6 +6,8 @@ author = "Jun Yu"
 math = "true"
 +++
 
+![png](/images/llm-reliability/snow.png)
+
 Large language models (LLMs) have taken the world by storm; with their sheer creative power and ability to generate highly compelling responses. Not only are these models at the center of attention for tech enthusiasts but many leading-edge organizations and businesses have also started to adopt this technology to power creative use cases or automate workflows at scale. However, putting LLMs in production is, more often than not, risky business — at its core, they are non-deterministic and ever-changing.
 
 <!--more-->
@@ -107,7 +109,7 @@ For example, this RAIL spec (from the project docs):
 
 will enforce the LLM output having this JSON structure:
 
-```json
+```javascript
 {
     "patient_info": {
         "gender": ...,
@@ -193,3 +195,4 @@ The Generative AI space has changed significantly in recent months, galvanized b
 
 [4] Tianyu Zhao, Divesh Lala, and Tatsuya Kawahara. 2020. Designing Precise and Robust Dialogue Response Evaluators. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 26–33, Online. Association for Computational Linguistics.
 
+*Cover image: Dolomites, Italy. Source: [Unsplash](https://unsplash.com/photos/kSYwKLhTNz0) (cropped)*
