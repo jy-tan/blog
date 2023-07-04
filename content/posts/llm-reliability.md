@@ -185,6 +185,8 @@ With good metrics, monitoring LLMs gives us a grasp on how reliable our system i
 
 The Generative AI space has changed significantly in recent months, galvanized by OpenAI’s ChatGPT and its mass adoption by the world. Though many researchers have their efforts aimed at LLMs’ performance against benchmarks, there is also a distinct opportunity space where product engineers can quantify and manage the reliability and quality of LLM’s outputs while harnessing their immense generative abilities to delight customers.
 
+*Thanks to my friend [Fan Pu](https://fanpu.io/) for reviewing this post and offering helpful suggestions!*
+
 # References
 
 [1] Chia-Wei Liu, Ryan Lowe, Iulian Serban, Mike Noseworthy, Laurent Charlin, and Joelle Pineau. 2016. How not to evaluate your dialogue system: An empirical study of unsupervised evaluation metrics for dialogue response generation. In *EMNLP 2016, The 2016 Conference on Empirical Methods in Natural Language Processing, pages 2122–2132*
