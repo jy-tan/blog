@@ -1,6 +1,6 @@
 +++
 title = "Concepts for Reliability of LLMs in Production"
-date = "2023-07-03T15:00:00+00:00"
+date = "2023-07-05T15:00:00+00:00"
 tags = ["llm"]
 author = "Jun Yu"
 math = "true"
@@ -8,13 +8,13 @@ math = "true"
 
 ![png](/images/llm-reliability/snow.png)
 
-Large language models (LLMs) have taken the world by storm; with their sheer creative power and ability to generate highly compelling responses. Not only are these models at the center of attention for tech enthusiasts but many leading-edge organizations and businesses have also started to adopt this technology to power creative use cases or automate workflows at scale. However, putting LLMs in production is, more often than not, risky business — at its core, they are non-deterministic and ever-changing.
+Large language models (LLMs) have taken the world by storm with their sheer creative power and ability to generate highly compelling responses. Not only are these models at the center of attention for tech enthusiasts but many leading-edge organizations and businesses have also started to adopt this technology to power creative use cases or automate workflows at scale. However, putting LLMs in production is, more often than not, risky business — at its core, they are non-deterministic and ever-changing.
 
 <!--more-->
 
 *Note: by LLMs, I am referring to managed models like OpenAI’s GPT-4. Self-hosted open-sourced LLMs (via Hugging Face or otherwise) usually allow users to set a seed for reproducibility.*
 
-Traditional fined-tuned ML models are trainable, deterministic, and for some of them, explainable. When we encounter an erroneous prediction that affects downstream tasks, we can trace it back to the model, rerun the inference step, and reproduce the same result. We can obtain valuable information like model confidences (prediction probabilities) as a measure of the model’s ability to perform the task given the inputs (instead of silently hallucinating). We can retrain the models to patch their understanding of the problem space. By replacing them with LLMs, we trade the *controllability* of ML systems for their flexibility, generalizability, and ease of use.
+Traditional fined-tuned ML models are trainable, deterministic, and for some of them, explainable. When we encounter an erroneous prediction that affects downstream tasks, we can trace it back to the model, rerun the inference step, and reproduce the same result. We can obtain valuable information like confidences (prediction probabilities) as a measure of the model’s ability to perform the task given the inputs (instead of silently hallucinating), and retrain it to patch its understanding of the problem space. By replacing them with LLMs, we trade the *controllability* of ML systems for their flexibility, generalizability, and ease of use.
 
 While LLMs are powerful, we should be cognizant of these risks and take appropriate steps to mitigate them. Below we discuss some of these methods, but they are non-exhaustive in this quickly-evolving space.
 
@@ -138,7 +138,7 @@ At the time of writing this post, there are other alternatives as well, like NVI
 
 # Human feedback
 
-In my previous blog post, I discussed the value of human-in-the-loop machine learning and how human feedback (whether implicit or explicit) is crucial for monitoring ML systems in production. We can apply the same approach here, especially for LLMs that try to perform traditional ML tasks, like text classification and generation. Model performance based on human preferences is the ultimate benchmark of the utility of ML systems.
+In my previous [blog post]({{< relref "human-in-the-loop" >}}), I discussed the value of human-in-the-loop machine learning and how human feedback (whether implicit or explicit) is crucial for monitoring ML systems in production. We can apply the same approach here, especially for LLMs that try to perform traditional ML tasks, like text classification and generation. Model performance based on human preferences is the ultimate benchmark of the utility of ML systems.
 
 *Note: This section is not about RLHF. We’re not training LLMs; as consumers from a product-building perspective, we can only tweak our systems that are built on top of these LLMs, but tweak them in a targeted way.*
 
