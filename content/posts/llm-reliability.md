@@ -9,7 +9,7 @@ math = "true"
 ![png](/images/llm-reliability/snow.png)
 
 
-Traditional fined-tuned ML models are trainable, deterministic, and for some of them, explainable. When we encounter an erroneous prediction that affects downstream tasks, we can trace it back to the model, rerun the inference step, and reproduce the same result. We can obtain valuable information like confidences (prediction probabilities) as a measure of the model’s ability to perform the task given the inputs (instead of silently hallucinating), and retrain it to patch its understanding of the problem space. By replacing them with LLMs, we trade the *controllability* of ML systems for their flexibility, generalizability, and ease of use.
+Traditional NLP models are trainable, deterministic, and for some of them, explainable. When we encounter an erroneous prediction that affects downstream tasks, we can trace it back to the model, rerun the inference step, and reproduce the same result. We obtain valuable information like confidences (prediction probabilities) as a measure of the model’s ability to perform the task given the inputs (instead of silently hallucinating), and retrain it to patch its understanding of the problem space. By replacing them with large language models (LLMs), we trade the *controllability* of machine learning (ML) systems for their flexibility, generalizability, and ease of use.
 
 <!--more-->
 
